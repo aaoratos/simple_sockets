@@ -64,10 +64,6 @@ $ ./simple_client client4 6969 3 &
 Now you can `tail -f log.txt` to conveniently watch in real-time how they
 interact with each other. So wow, much fun :moyai:
 
-```bash
-$ tail -f log.txt
-```
-
 ## Contacts
 
 Telegram: [@antonomore](https://t.me/antonomore)
