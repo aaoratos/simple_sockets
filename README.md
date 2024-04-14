@@ -38,21 +38,15 @@ This will create the `build` directory with the `simple_client` and
 
 ## Usage
 
-### Server
-
-The server expects a port number
-
 ```shell
 $ ./simple_server <port>
 ```
 
-### Client
-
 ```shell
-$ ./simple_client <client_name> <server_port> <connection_prceriod>
+$ ./simple_client <client_name> <server_port> <connection_period>
 ```
 
-So, basically you run the server in the detached mode with something like this:
+So, basically you run the server in the detached mode with a command like:
 
 ```bash
 $ ./simple_server 6969 &
@@ -67,8 +61,8 @@ $ ./simple_client client3 6969 5 &
 $ ./simple_client client4 6969 3 &
 ```
 
-Now, to conveniently watch how the `log.txt` changes in real-time you can
-use the following command:
+Now you can `tail -f log.txt` to conveniently watch in real-time how they
+interact with each other. So wow, much fun :moyai:
 
 ```bash
 $ tail -f log.txt
