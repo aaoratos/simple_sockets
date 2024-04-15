@@ -18,7 +18,7 @@ int main([[maybe_unused]] const int argc, [[maybe_unused]] const char* const* co
     const std::vector<std::string> args(argv, std::next(argv, static_cast<std::ptrdiff_t>(argc)));
     if (args.size()!=4) {
         print_usage(args[0].c_str());
-        return -1;
+        return EXIT_FAILURE;
     }
     const std::string& client_name = args[1];
     const std::uint16_t server_port = noct::util::stos(args[2]);
