@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-void print_usage(const char* binary_path)
+static void print_usage(const char* binary_path)
 {
     std::printf("%s: <port>", binary_path);
 }

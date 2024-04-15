@@ -6,9 +6,20 @@
 #include "Client.h"
 #include "Utility.h"
 
+static void print_usage(const char* binary_path)
+{
+    std::cout << binary_path << ": "
+              << "<client_name> " << "<server_port> "
+              << "<connection_period>" << std::endl;
+}
+
 int main([[maybe_unused]] const int argc, [[maybe_unused]] const char* const* const argv)
 {
     const std::vector<std::string> args(argv, std::next(argv, static_cast<std::ptrdiff_t>(argc)));
+    if (args.size()!=4) {
+        print_usage(args[0].c_str());
+        return -1;
+    }
     const std::string& client_name = args[1];
     const std::uint16_t server_port = noct::util::stos(args[2]);
     const std::uint32_t connection_period = noct::util::stos(args[3]);
