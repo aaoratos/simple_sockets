@@ -8,7 +8,7 @@
 void print_usage(const char* binary_path)
 {
     std::printf("%s: <port>", binary_path);
-};
+}
 
 int main([[maybe_unused]] const int argc, [[maybe_unused]] const char* const* const argv)
 {
